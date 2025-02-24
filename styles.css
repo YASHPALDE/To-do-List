@@ -1,0 +1,144 @@
+ 
+
+    
+
+body { 
+    
+    background-image: url("https://cdn.pixabay.com/photo/2023/04/27/19/03/flower-meadow-7955256_1280.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+ 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to ensure content doesn't get cut off */
+    background-color: #f4f4f4;
+    margin: 0; /* Remove default body margin */
+}
+
+.container {
+    background: rgb(144, 10, 227);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(2, 30, 40, 0.1);
+    width: 350px; /* Slightly wider for better mobile view */
+    max-width: 90%; /* Prevent container from being too wide on large screens */
+    text-align: center;
+}
+
+.input-area { /* Style the input and button container */
+    display: flex;
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 10px;
+}
+
+input {
+    flex-grow: 1; /* Allow input to expand to fill available space */
+    padding: 10px;
+    border: 1px solid #94063c;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px; /* Adjust padding for better button size */
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Match input border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a transition for hover effect */
+}
+
+button:hover {
+    background-color: #1e7e34; /* Darker green on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center; /* Vertically align content */
+    justify-content: space-between;
+    padding: 10px;
+    background: #eee;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer; /* Make list items clickable */
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #ddd;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li span { /* Style the task text */
+    flex-grow: 1; /* Allow task text to expand */
+    word-break: break-all; /* Prevent long words from overflowing */
+}
+
+li button { /* Style the remove button */
+    background: none; /* Remove background */
+    color: #dc3545; /* Red color */
+    border: none;
+    padding: 0; /* Remove default button padding */
+    font-size: 1.2em; /* Larger font size */
+    cursor: pointer;
+}
+
+li button:hover {
+    color: #c82333; /* Darker red on hover */
+}
+.rightbox{
+    
+    position: absolute; /* Take the element out of the document flow */
+    top: 0; /* Position at the top */
+    right: 0; /* Position at the right */
+    background: rgb(234, 233, 235);
+    padding: 20px;
+    width: 350px;
+    max-width: 90%; /* Still useful for smaller screens */
+    text-align: center;
+    /* Optional: Add some margin to the top and right */
+    margin-top: 20px;
+    margin-right: 20px
+    
+}
+.checkbox {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #28a745; /* Green color for the checkbox */
+    margin-right: 10px; /* Add some spacing */
+}
+
+.checkbox:hover {
+    color: #1e7e34; /* Darker green on hover */
+}
+
+.leftbox {
+    position: absolute;
+    top: 0;
+    left: 0; /* Changed from right: 0; to left: 0; */
+    background: rgb(234, 233, 235);
+    padding: 20px;
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px; /* Or margin-right if you prefer */
+}
+
+.leftbox li {
+    background: #f8d7da; /* Light red background for deleted tasks */
+    border-left: 5px solid #dc3545; /* Red border to indicate deleted tasks */
+}
